@@ -172,4 +172,4 @@ cython_debug/
 
 
 # Javascript and NPM (FrontEnd ignores)
-*techWithTim/music_controller/frontend/node_modules*
+*data_configurator/frontend/node_modules/*
