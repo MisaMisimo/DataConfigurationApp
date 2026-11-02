@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { createRoot } from "react-dom/client"
-// import HomePage from "./HomePage";
+import HomePage from "./HomePage";
 
 
 export default class App extends Component {
@@ -11,8 +11,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="center">
-                <p>Main Page Placeholder</p>
-                {/* <HomePage /> */}
+                <HomePage />
             </div>
 
         );

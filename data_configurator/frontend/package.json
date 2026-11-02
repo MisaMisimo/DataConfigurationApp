@@ -21,11 +21,13 @@
     "webpack-cli": "^7.2.3"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.37.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^9.4.0",
-    "@mui/material": "^9.4.0",
+    "@mui/material": "^9.5.0",
     "@mui/styled-engine": "^9.5.0",
+    "@tanstack/react-table": "^9.3.1",
     "react-router-dom": "^7.18.4"
   }
 }
