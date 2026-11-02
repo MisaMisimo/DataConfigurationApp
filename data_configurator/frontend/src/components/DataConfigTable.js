@@ -69,12 +69,12 @@ export default function DataconfigTable() {
 
     });
 
-    table.getRowModel().rows.map(row => {
-        row.getAllCells().map(cell => {
-            console.log(cell.column.columnDef.cell);
-            console.log(cell.getContext());
-        })
-    })
+    // table.getRowModel().rows.map(row => {
+    //     row.getAllCells().map(cell => {
+    //         console.log(cell.column.columnDef.cell);
+    //         console.log(cell.getContext());
+    //     })
+    // })
 
     function handleCellBlur() {
         console.log("cell blur");

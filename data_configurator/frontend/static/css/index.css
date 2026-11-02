@@ -6,6 +6,39 @@ body {
     /* color: white; */
 }
 
+.DataWorkspace {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #111111;
+}
+
+div[data-separator="inactive"] {
+    background-color: #111111;
+}
+
+div[data-separator="hover"],
+div[data-separator="active"] {
+    background-color: #CCCCCC;
+}
+
+div[data-panel] {
+    background-color: #303030;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.separator-horizontal {
+    width: 2px;
+}
+
+.separator-vertical {
+    height: 2px;
+}
+
 #main {
     position: fixed;
     width: 100%;

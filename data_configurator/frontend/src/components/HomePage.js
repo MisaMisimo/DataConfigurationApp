@@ -7,12 +7,18 @@ import {
     useNavigate,
 } from "react-router-dom";
 import DataconfigTable from "./DataConfigTable";
+import DataWorkspace from "./DataWorkspace";
+import { WorkspaceModel } from "react-resizable-panels";
+import {
+    Panel,
+    PanelGroup,
+    PanelResizeHandle
+} from 'react-resizable-panels'
 
 function HomePage() {
 
-    return (<>
-        <p> We're in home page!</p>
-        <DataconfigTable></DataconfigTable>
-    </>);
+    return (
+        <DataWorkspace />
+    );
 }
 export default HomePage
