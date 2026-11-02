@@ -76,6 +76,13 @@ export default function DataconfigTable() {
         })
     })
 
+    function handleCellBlur() {
+        console.log("cell blur");
+    }
+    function handleCellFocus() {
+        console.log("cell focus");
+    }
+
     return (<>
         <h1> Data Config Table</h1>
         <Stack container spacing={2} gap={2}>
@@ -105,6 +112,8 @@ export default function DataconfigTable() {
                                     <TextField
                                         required={true}
                                         defaultValue={cell.renderValue()}
+                                        onBlur={handleCellBlur}
+                                        onFocus={handleCellFocus}
                                     >
 
                                     </TextField>
