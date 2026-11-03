@@ -9,12 +9,6 @@ import {
 import DataconfigTable from "./DataConfigTable";
 import DataWorkspace from "./DataWorkspace";
 import DataGrid from "./DataGrid";
-import { WorkspaceModel } from "react-resizable-panels";
-import {
-    Panel,
-    PanelGroup,
-    PanelResizeHandle
-} from 'react-resizable-panels'
 
 function HomePage() {
 

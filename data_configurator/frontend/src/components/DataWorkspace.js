@@ -7,7 +7,7 @@ import {
     useNavigate,
 } from "react-router-dom";
 import DataconfigTable from "./DataConfigTable";
-import { Separator, Workspace, WorkspaceModel } from "react-resizable-panels";
+import { Separator, Workspace } from "react-resizable-panels";
 import TabContent from "./TabContent";
 import { Grid } from "react-resizable-panels"
 
