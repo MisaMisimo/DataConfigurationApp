@@ -27,14 +27,15 @@ export default function TabContent(
             label: 'Messages',
             content: 'You have 3 new messages',
         },
+        {
+            label: 'About',
+            content: 'Lorem ipsum babe'
+        }
     ]
 
     console.log(kind)
 
-    // function setActiveTab(index) {
-    //     console.log("setActiveTab")
-    //     console.log(index);
-    // }
+
     return (<>
         <div className="tabs-container">
             <div className="tab-header">

@@ -47,9 +47,44 @@ div[data-panel] {
     top: 0;
 }
 
+.cell {
+    padding: 8px;
+    /* margin: 2px; */
+    background-color: rgb(255, 196, 119);
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+
+}
+
+.cell>h1,
+h2 {
+    text-align: center;
+    /* color: white; */
+}
+
+.gridline {
+    background-color: #CCCCCC;
+}
+
+.gridline[aria-orientation="vertical"] {
+    width: 5px;
+}
+
+.gridline[aria-orientation="horizontal"] {
+    height: 5px;
+}
+
+.gridline:hover {
+    background-color: white;
+
+}
+
 #app {
     width: 100%;
     height: 100%;
+
+    background-color: #424242;
     /* display: flex;
     flex-direction: column; */
 }

@@ -9,10 +9,21 @@ import {
 import DataconfigTable from "./DataConfigTable";
 import { Separator, Workspace, WorkspaceModel } from "react-resizable-panels";
 import TabContent from "./TabContent";
+import { Grid } from "react-resizable-panels"
 
 export default function DataWorkspace() {
-    function saveModel() {
-        console.log("save model");
+    const STORAGE_KEY = 'data-configuration:workspace'
+    function loadModel() {
+        try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : undefined;
+        }
+        catch {
+            // Do nothing
+        }
+    }
+    function saveModel(model) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(model));
     }
     const initialModel = {
         version: 1,
@@ -57,8 +68,10 @@ export default function DataWorkspace() {
         }
     };
     return (
+
         <Workspace
             className="DataWorkspace"
+            // defaultModel={loadModel() ?? initialModel}
             defaultModel={initialModel}
             onModelChanged={(model) => saveModel(model)}
             renderTabContent={(tab) => <TabContent kind={tab.data.kind} />}

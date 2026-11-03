@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import DataconfigTable from "./DataConfigTable";
 import DataWorkspace from "./DataWorkspace";
+import DataGrid from "./DataGrid";
 import { WorkspaceModel } from "react-resizable-panels";
 import {
     Panel,
@@ -18,7 +19,8 @@ import {
 function HomePage() {
 
     return (
-        <DataWorkspace />
+        // <DataWorkspace />
+        <DataGrid />
     );
 }
 export default HomePage
