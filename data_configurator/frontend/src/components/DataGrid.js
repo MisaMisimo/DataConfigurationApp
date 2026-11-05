@@ -11,6 +11,7 @@ import { Gridline, Separator, Workspace, Grid, Cell, useDefaultGridLayout } from
 import TabContent from "./TabContent";
 import { } from "react-resizable-panels"
 import { Typography } from "@mui/material";
+import { TextField } from "@mui/material";
 export default function DataGrid() {
 
     const { defaultLayout, onLayoutChanged } = useDefaultGridLayout({
@@ -47,7 +48,7 @@ export default function DataGrid() {
             <Cell className="cell" row={0} column={0} columnSpan={2}><Typography variant="h1">Header</Typography></Cell>
             <Cell className="cell" row={1} column={0}><Typography variant="h2">A</Typography></Cell>
             <Cell className="cell" row={1} column={1}><Typography variant="h2">B</Typography></Cell>
-            <Cell className="cell" row={2} column={0}><Typography variant="h2">C</Typography></Cell>
+            <Cell className="cell" row={2} column={0}><TextField required={false} type="text" label="Search Field" >0</TextField></Cell>
             <Cell className="cell" row={2} column={1} rowSpan={2}><Typography variant="h2">D</Typography></Cell>
             <Cell className="cell" row={3} column={0}><Typography variant="h2">E</Typography></Cell>
             <Cell className="cell" row={4} column={0}><Typography variant="h2">G</Typography></Cell>
