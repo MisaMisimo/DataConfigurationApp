@@ -13,68 +13,10 @@ import { } from "react-resizable-panels"
 import { Typography } from "@mui/material";
 export default function DataGrid() {
 
-    // const { defaultLayout, onLayoutChange } = useDefaultGridLayout({
-    //     id: "unique-layout-id"
-    // });
-    const STORAGE_KEY = 'grid-layout'
+    const { defaultLayout, onLayoutChanged } = useDefaultGridLayout({
+        id: "unique-grid-layout-id"
+    });
 
-    function loadGridLayout() {
-        try {
-            const stored = localStorage.getItem(STORAGE_KEY);
-            console.log("stored");
-            console.log(stored);
-            return stored ? JSON.parse(stored) : undefined;
-
-        }
-        catch {
-            // Do nothing
-        }
-    }
-
-    function saveGridLayout(gridLayout) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(gridLayout))
-        console.log("GridLayout")
-        console.log(gridLayout);
-    }
-    const initialDefaultLayout = {
-        "columns": {
-            0: 50,
-            1: 50,
-        },
-        "rows": {
-            0: 20,
-            1: 20,
-            2: 20,
-            3: 20,
-            4: 20,
-            5: 20,
-        }
-
-    }
-    //     columns: {
-    //         [
-    //             {
-    //                 collapsible: true,
-    //                 collapsedSize: 44,
-    //                 minSize: 120,
-    //                 // defaultSize: 160,
-    //             },
-    //             {
-    //                 minSize: "20%",
-    //             },
-    //         ],
-    //     },
-    //     rows:
-    //     {
-    //         [
-    //             { minSize: 10 },
-    //             { minSize: 10 },
-    //             { minSize: 10 },
-    //             { minSize: 10 },
-    //             { minSize: 100, collapsible: true },
-    //         ],
-    //     }
-    // }
     return (
         <Grid
             columns={
@@ -99,8 +41,8 @@ export default function DataGrid() {
                     { minSize: 100, collapsible: true },
                 ]
             }
-            defaultLayout={loadGridLayout() ? initialDefaultLayout : undefined}
-            onLayoutChange={(layout) => saveGridLayout(layout)}
+            defaultLayout={defaultLayout}
+            onLayoutChanged={onLayoutChanged}
         >
             <Cell className="cell" row={0} column={0} columnSpan={2}><Typography variant="h1">Header</Typography></Cell>
             <Cell className="cell" row={1} column={0}><Typography variant="h2">A</Typography></Cell>
