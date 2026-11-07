@@ -7,7 +7,7 @@ import {
     useNavigate,
 } from "react-router-dom";
 import DataconfigTable from "./DataConfigTable";
-import { Gridline, Workspace, Grid, Cell, useDefaultGridLayout } from "react-resizable-panels";
+import { Gridline, Workspace, Grid, Cell, useDefaultLayout } from "react-resizable-panels";
 import TabContent from "./TabContent";
 import { Group, Panel, Separator } from "react-resizable-panels"
 import { Typography } from "@mui/material";
@@ -16,12 +16,15 @@ import Accordion from "./Accordion";
 
 export default function FlexPanels() {
 
-    // const { defaultLayout, onLayoutChanged } = useDefaultGridLayout({
-    //     id: "unique-grid-layout-id"
-    // });
+    const { defaultLayout, onLayoutChanged } = useDefaultLayout({
+        id: "unique-layout-id",
+        storage: localStorage
+    });
 
     return (<>
-        <Group orientation="horizontal">
+        <Group orientation="horizontal"
+            defaultLayout={defaultLayout}
+            onLayoutChanged={onLayoutChanged}>
             <Panel minSize={190} style={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -32,7 +35,15 @@ export default function FlexPanels() {
             <Separator style={{ width: 5, }
             } />
             <Panel defaultSize={"50%"} minSize={300}>
-                <Accordion />
+                <Group orientation="vertical">
+                    <Panel>
+                        <Typography variant="h1" >Top</Typography>
+                    </Panel>
+                    <Separator />
+                    <Panel>
+                        <Accordion />
+                    </Panel>
+                </Group>
             </Panel>
             <Separator style={{ width: 5, }
             } />
@@ -43,7 +54,7 @@ export default function FlexPanels() {
 
             }}>
                 <Typography variant="h1" >right</Typography></Panel>
-        </Group>
+        </Group >
         {/* <Group>
             <Panel
                 minSize={100} maxSize={200}>left</Panel>
