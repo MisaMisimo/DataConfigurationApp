@@ -12,6 +12,7 @@ import TabContent from "./TabContent";
 import { Group, Panel, Separator } from "react-resizable-panels"
 import { Typography } from "@mui/material";
 import { TextField } from "@mui/material";
+import Accordion from "./Accordion";
 
 export default function FlexPanels() {
 
@@ -31,33 +32,7 @@ export default function FlexPanels() {
             <Separator style={{ width: 5, }
             } />
             <Panel defaultSize={"50%"} minSize={300}>
-                <Group orientation="vertical">
-                    <Panel minSize={120} style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-
-                    }}>
-                        <Typography variant="h1" >top</Typography>
-                    </Panel>
-                    <Separator style={{ height: 5, }
-                    } />
-                    <Panel minSize={120} style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-
-                    }}><Typography variant="h1" >middle</Typography></Panel>
-                    <Separator style={{ height: 5, }
-                    } />
-                    <Panel minSize={120} style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-
-                    }}>
-                        <Typography variant="h1" >bottom</Typography></Panel>
-                </Group>
+                <Accordion />
             </Panel>
             <Separator style={{ width: 5, }
             } />

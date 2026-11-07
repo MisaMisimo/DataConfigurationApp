@@ -12,6 +12,7 @@ import TabContent from "./TabContent";
 import { Group, Panel, Separator } from "react-resizable-panels"
 import { Button, Typography } from "@mui/material";
 import { TextField } from "@mui/material";
+import DataGrid from "./DataGrid";
 
 function SectionHeader({ title }) {
     const panel = useParentPanel();
@@ -19,8 +20,10 @@ function SectionHeader({ title }) {
     const toggle = () => {
         if (panel?.isCollapsed()) {
             panel.expand();
+            console.log("expanding panel");
         } else {
-            panel?.collapse();
+            panel.collapse();
+            console.log("collapsing panel");
         }
     }
     return (
@@ -35,23 +38,19 @@ function SectionHeader({ title }) {
 }
 
 function Section({ children, title }) {
-    return <Panel collapsedSize={28}>
-        <Typography variant="h2">{title}</Typography>
+    return <Panel collapsible collapsedSize={28}>
+        {/* <Typography variant="h2">{title}</Typography> */}
         <SectionHeader title={title}></SectionHeader>
         {children}
     </Panel>
 }
 export default function Accordion() {
-
-    // const { defaultLayout, onLayoutChanged } = useDefaultGridLayout({
-    //     id: "unique-grid-layout-id"
-    // });
-
     return (<>
         <Group orientation="vertical">
-            <Section title="Open Editors">...</Section>
+            <Section title="Open Editors"><DataGrid /></Section>
             <Section title="Folders">...</Section>
             <Section title="Outline">...</Section>
+            <Section title="TestFlow">...</Section>
         </Group>
     </>
     );

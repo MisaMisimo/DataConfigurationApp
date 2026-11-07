@@ -10,7 +10,7 @@ import DataconfigTable from "./DataConfigTable";
 import DataWorkspace from "./DataWorkspace";
 import DataGrid from "./DataGrid";
 import FlexPanels from "./FlexPanels";
-
+import Accordion from "./Accordion";
 
 function HomePage() {
 
