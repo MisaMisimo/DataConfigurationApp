@@ -9,12 +9,15 @@ import {
 import DataconfigTable from "./DataConfigTable";
 import DataWorkspace from "./DataWorkspace";
 import DataGrid from "./DataGrid";
+import FlexPanels from "./FlexPanels";
+
 
 function HomePage() {
 
     return (
         // <DataWorkspace />
-        <DataGrid />
+        // <DataGrid />
+        <FlexPanels />
     );
 }
 export default HomePage
