@@ -45,15 +45,17 @@ export default function FlexPanels() {
                     </Panel>
                 </Group>
             </Panel>
-            <Separator style={{ width: 5, }
-            } />
+            <Separator disabled style={{ width: 5, }} />
+            <div style={{ width: 80, display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Typography variant="h1">A</Typography></div>
+            <Separator style={{ width: 5, }} />
             <Panel minSize={190} style={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
 
             }}>
-                <Typography variant="h1" >right</Typography></Panel>
+                <Typography variant="h1" >right</Typography>
+            </Panel>
         </Group >
         {/* <Group>
             <Panel
