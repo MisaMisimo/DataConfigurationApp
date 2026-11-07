@@ -21,23 +21,53 @@ export default function FlexPanels() {
 
     return (<>
         <Group orientation="horizontal">
-            <Panel
-                minSize={500} collapsible defaultSize={"25%"} collapsedSize={25} collapsedThreshold={"25%"}>left</Panel>
+            <Panel minSize={190} style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+
+            }}>
+                <Typography variant="h1" >left</Typography></Panel>
             <Separator style={{ width: 5, }
             } />
-            <Group orientation="vertical">
-                <Panel
-                    minSize={50} defaultSize={"25%"} collapsedSize={25} >top</Panel>
-                <Separator style={{ height: 5, }
-                } />
-                <Panel minSize={"10%"}>middle</Panel>
-                <Separator style={{ height: 5, }
-                } />
-                <Panel minSize={"10%"}>bottom</Panel>
-            </Group>
+            <Panel defaultSize={"50%"} minSize={300}>
+                <Group orientation="vertical">
+                    <Panel minSize={120} style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+
+                    }}>
+                        <Typography variant="h1" >top</Typography>
+                    </Panel>
+                    <Separator style={{ height: 5, }
+                    } />
+                    <Panel minSize={120} style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+
+                    }}><Typography variant="h1" >middle</Typography></Panel>
+                    <Separator style={{ height: 5, }
+                    } />
+                    <Panel minSize={120} style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+
+                    }}>
+                        <Typography variant="h1" >bottom</Typography></Panel>
+                </Group>
+            </Panel>
             <Separator style={{ width: 5, }
             } />
-            <Panel minSize={"10%"}>right</Panel>
+            <Panel minSize={190} style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+
+            }}>
+                <Typography variant="h1" >right</Typography></Panel>
         </Group>
         {/* <Group>
             <Panel
