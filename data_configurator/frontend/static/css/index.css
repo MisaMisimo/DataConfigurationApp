@@ -97,14 +97,14 @@ body {
     background: rgba(85, 194, 181, 0.09);
 }
 
-.DataWorkspace [data-tab] > button {
+.DataWorkspace [data-tab]>button {
     display: inline-grid;
     width: 20px;
     height: 20px;
     place-items: center;
     margin-left: 9px;
     padding: 0;
-    border: 1px solid #34445a;
+    border: 0px solid #34445a;
     border-radius: 5px;
     color: #93a4ba;
     background: #182538;
@@ -115,7 +115,7 @@ body {
     transition: color 140ms ease, border-color 140ms ease, background-color 140ms ease;
 }
 
-.DataWorkspace [data-tab] > button:hover {
+.DataWorkspace [data-tab]>button:hover {
     border-color: #d97777;
     color: #ffe4e4;
     background: rgba(185, 71, 71, 0.22);
