@@ -59,7 +59,8 @@ export default function DataWorkspace() {
                             id: "bottom",
                             size: 35,
                             tabs: [
-                                { id: "scratchpad", title: "Scratchpad", data: { kind: "notes" } }
+                                { id: "scratchpad", title: "Scratchpad", data: { kind: "notes" } },
+                                { id: "SSHConfig2", title: "SSH Configurations", data: { kind: "sshconfig" } }
                             ]
                         }
                     ]

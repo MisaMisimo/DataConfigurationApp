@@ -20,7 +20,14 @@ export default function SshConfig({ kind }) {
             label: 'P3',
             username: 'user3',
             password: 'password3',
-        }
+        },
+        {
+            id: 4,
+            label: 'P4',
+            username: 'user4',
+            password: 'password3',
+        },
+
     ]
 
     function addNewSshConfiguration() {
@@ -40,8 +47,12 @@ export default function SshConfig({ kind }) {
         <div style={{
             display: 'flex',
             flexDirection: 'column',
-            margin: '4px'
-        }}>
+            margin: '4px',
+            overflow: 'auto',
+            backgroundColor: 'red',
+        }}
+
+            className="ssh-config-component">
             {sshData.map(sshConfigCell => {
                 { console.log('Trying out printing sshConfigcell') }
                 { console.log(sshConfigCell) }
@@ -51,10 +62,9 @@ export default function SshConfig({ kind }) {
                 }}
                     onClick={() => { selectSshConfig(sshConfigCell.id) }}>
                     <CardContent>
-                        <Typography variant="p" >ID: {sshConfigCell.id}</Typography>
-                        <Typography variant="p" >Label: {sshConfigCell.label}</Typography>
-                        <Typography variant="p" >Username: {sshConfigCell.username}</Typography>
-                        <Typography variant="p" >Password: {sshConfigCell.password}</Typography>
+                        <p variant="p" >Label: {sshConfigCell.label}</p>
+                        <p>Username: {sshConfigCell.username}</p>
+                        <p>Password: {sshConfigCell.password}</p>
                     </CardContent>
                 </Card>);
 
