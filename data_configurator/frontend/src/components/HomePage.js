@@ -15,9 +15,9 @@ import Accordion from "./Accordion";
 function HomePage() {
 
     return (
-        // <DataWorkspace />
+        <DataWorkspace />
         // <DataGrid />
-        <FlexPanels />
+        // <FlexPanels />
     );
 }
 export default HomePage
