@@ -151,12 +151,12 @@ body {
 }
 
 .DataWorkspace .separator-horizontal {
-    width: 8px;
+    width: 2px;
     cursor: col-resize;
 }
 
 .DataWorkspace .separator-vertical {
-    height: 8px;
+    height: 2px;
     cursor: row-resize;
 }
 
@@ -186,60 +186,125 @@ body {
     box-shadow: 0 0 10px rgba(85, 194, 181, 0.4);
 }
 
-.DataWorkspace .tabs-container {
-    display: flex;
-    height: 100%;
-    min-height: 0;
-    flex-direction: column;
-    gap: 16px;
-    padding: 22px;
-}
-
-.DataWorkspace .tab-header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    border-bottom: 1px solid #29364a;
-}
-
-.DataWorkspace .tab-button,
-.DataWorkspace .active-tab {
-    padding: 9px 13px;
-    border: 1px solid transparent;
-    border-bottom: 2px solid transparent;
-    border-radius: 7px 7px 0 0;
-    color: #93a4ba;
-    background: transparent;
-    font: inherit;
-    font-size: 13px;
-    cursor: pointer;
-    transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
-}
-
-.DataWorkspace .tab-button:hover {
-    color: #e2e8f0;
-    background: rgba(148, 163, 184, 0.08);
-}
-
-.DataWorkspace .active-tab {
-    border-bottom-color: #55c2b5;
-    color: #f1f5f9;
-    background: rgba(85, 194, 181, 0.09);
-}
-
-.DataWorkspace .tab-content {
-    flex: 1;
-    min-height: 0;
-    padding: 22px;
-    border: 1px solid #29364a;
-    border-radius: 10px;
+.DataWorkspace .workspace-content {
+    min-height: 100%;
+    padding: 24px;
     color: #cbd5e1;
-    background: linear-gradient(145deg, #152236, #111b2b 72%);
     line-height: 1.65;
 }
 
-.DataWorkspace .tab-content p {
+.DataWorkspace .workspace-content h1 {
+    margin: 0 0 12px;
+    color: #f1f5f9;
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.DataWorkspace .workspace-content p {
+    max-width: 680px;
     margin: 0;
+}
+
+.DataWorkspace .workspace-content .workspace-eyebrow {
+    margin-bottom: 8px;
+    color: #55c2b5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.DataWorkspace .counter-value {
+    margin: 20px 0 !important;
+    color: #f1f5f9;
+    font-size: 48px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.DataWorkspace .workspace-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.DataWorkspace .workspace-actions button {
+    min-height: 36px;
+    padding: 0 13px;
+    border: 1px solid #34445a;
+    border-radius: 7px;
+    color: #d7e0ec;
+    background: #182538;
+    font: inherit;
+    cursor: pointer;
+    transition: border-color 140ms ease, background-color 140ms ease;
+}
+
+.DataWorkspace .workspace-actions button:hover {
+    border-color: #55c2b5;
+    background: #203346;
+}
+
+.DataWorkspace .workspace-actions button:focus-visible,
+.DataWorkspace .workspace-notes textarea:focus-visible {
+    outline: 2px solid #55c2b5;
+    outline-offset: 2px;
+}
+
+.DataWorkspace .workspace-notes {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.DataWorkspace .workspace-notes textarea {
+    width: 100%;
+    min-height: 160px;
+    flex: 1;
+    resize: none;
+    padding: 14px;
+    border: 1px solid #29364a;
+    border-radius: 8px;
+    color: #e2e8f0;
+    background: #0e1726;
+    font: inherit;
+    line-height: 1.6;
+}
+
+.DataWorkspace .workspace-notes textarea::placeholder {
+    color: #718198;
+}
+
+.DataWorkspace .nested-panels {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.DataWorkspace .nested-panels article {
+    min-height: 140px;
+    padding: 18px;
+    border: 1px solid #29364a;
+    border-radius: 9px;
+    background: linear-gradient(145deg, #152236, #111b2b 72%);
+}
+
+.DataWorkspace .nested-panels h2 {
+    margin: 0 0 8px;
+    color: #e2e8f0;
+    font-size: 15px;
+    text-align: left;
+}
+
+.DataWorkspace .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
 }
 
 #main {
@@ -345,11 +410,11 @@ table {
         padding: 0 10px;
     }
 
-    .DataWorkspace .tabs-container {
-        padding: 14px;
+    .DataWorkspace .workspace-content {
+        padding: 18px;
     }
 
-    .DataWorkspace .tab-content {
-        padding: 16px;
+    .DataWorkspace .nested-panels {
+        grid-template-columns: 1fr;
     }
 }

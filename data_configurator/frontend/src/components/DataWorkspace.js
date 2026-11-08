@@ -36,7 +36,7 @@ export default function DataWorkspace() {
                     type: "tabset",
                     id: "sidebar",
                     size: 25,
-                    tabs: [{ id: "about", title: "About", data: { kind: "about" } }]
+                    tabs: [{ id: "SSHConfig", title: "SSH Configurations", data: { kind: "sshconfig" } }]
                 },
                 {
                     type: "split",
