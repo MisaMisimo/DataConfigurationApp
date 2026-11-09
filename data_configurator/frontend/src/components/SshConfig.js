@@ -44,15 +44,13 @@ export default function SshConfig({ kind }) {
         { console.log(sshConfigCell) }
     })
     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            margin: '4px',
-            overflow: 'auto',
-            backgroundColor: 'red',
-        }}
-
-            className="ssh-config-component">
+        <div
+            style={{
+                margin: '4px',
+                // backgroundColor: 'red',
+            }}
+            className="ssh-config-component"
+        >
             {sshData.map(sshConfigCell => {
                 { console.log('Trying out printing sshConfigcell') }
                 { console.log(sshConfigCell) }
